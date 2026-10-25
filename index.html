@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calder Dental Studio — Unhurried general &amp; cosmetic dentistry</title>
+  <meta name="description" content="Calder Dental Studio offers calm, unhurried general and cosmetic dentistry. Every option is explained before treatment begins. Request an appointment online.">
+  <meta name="theme-color" content="#F5F9F9">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Sentinel: when it scrolls out of view the header switches to its solid state -->
+  <div class="header-sentinel" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner container">
+      <a class="logo" href="index.html" aria-label="Calder Dental Studio — home">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="14.75" />
+          <path d="M5 19.5h22" />
+          <path d="M10.5 19.5a5.5 5.5 0 0 1 11 0" />
+        </svg>
+        <span class="logo__word">Calder</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main">
+        <ul class="primary-nav__list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Our services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--small" href="contact.html#request">
+          <span class="hide-sm">Book an appointment</span><span class="show-sm">Book</span>
+          <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" /></svg>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span class="visually-hidden" data-menu-label>Open menu</span>
+          <span class="menu-toggle__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" data-menu hidden>
+      <nav class="container" aria-label="Mobile">
+        <ul class="mobile-menu__list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Our services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="contact.html#request">Book an appointment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" data-hero aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__head">
+          <h1 class="hero__title display" id="hero-title" data-reveal>
+            Unhurried dental care, <em>explained</em> at every step.
+          </h1>
+          <div class="hero__aside" data-reveal>
+            <p class="hero__lead">General and cosmetic dentistry that starts with a conversation. We talk you through what we see and what your options are, so every decision is yours to make.</p>
+            <div class="hero__actions">
+              <a class="link-arrow" href="#treatments">Explore treatments</a>
+              <a class="link-arrow" href="#visit">What to expect</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__stage" data-reveal="image">
+          <figure class="hero__figure">
+            <picture>
+              <source media="(max-width: 47.99em)" srcset="assets/images/hero-wide-800.webp" width="800" height="600">
+              <img
+                src="assets/images/hero-pano-1600.webp"
+                srcset="assets/images/hero-pano-1000.webp 1000w, assets/images/hero-pano-1600.webp 1600w, assets/images/hero-pano-2200.webp 2200w"
+                sizes="(min-width: 85em) 1240px, 92vw"
+                width="1600" height="762"
+                alt="A clinician sitting beside a smiling patient in a dental chair, chatting before an examination."
+                fetchpriority="high">
+            </picture>
+          </figure>
+
+          <!-- Quick start: opens the contact page form with the chosen treatment pre-selected (?treatment=…). -->
+          <form class="quick" action="contact.html#request" method="get" data-quick aria-labelledby="quick-title">
+            <h2 class="quick__title" id="quick-title">Start an appointment request</h2>
+            <div class="field">
+              <label for="q-treatment">What would you like help with?</label>
+              <div class="select">
+                <select id="q-treatment" name="treatment">
+                  <option>Not sure yet</option>
+                  <option>Check-up or examination</option>
+                  <option>Hygiene appointment</option>
+                  <option>Teeth whitening</option>
+                  <option>Clear aligners</option>
+                  <option>Implant consultation</option>
+                  <option>Urgent appointment</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">
+              Continue
+              <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" /></svg>
+            </button>
+            <p class="quick__note">A few details and you’re done. We’ll contact you to confirm a time.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPROACH ============ -->
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="label-row" data-reveal><span class="tag">Our approach</span><span class="count" aria-hidden="true">(01)</span></div>
+
+        <h2 class="statement" id="approach-title" data-reveal>
+          Most people don’t dread the dentist. They dread <em>not knowing</em> what’s about to happen.
+          <span class="statement__img"><img src="assets/images/inline-480.webp" width="480" height="300" loading="lazy" decoding="async" alt=""></span>
+          So we explain everything, <em>before anything begins.</em>
+        </h2>
+
+        <ol class="principles">
+          <li class="principle" data-reveal>
+            <span class="principle__num" aria-hidden="true">i.</span>
+            <h3 class="principle__title">We explain first</h3>
+            <p>Before any treatment, we show you what we’ve found and talk through what it means, in plain language and without rushing.</p>
+          </li>
+          <li class="principle" data-reveal>
+            <span class="principle__num" aria-hidden="true">ii.</span>
+            <h3 class="principle__title">You set the pace</h3>
+            <p>We agree a simple signal before we start. Raise it at any point and we stop, no questions asked.</p>
+          </li>
+          <li class="principle" data-reveal>
+            <span class="principle__num" aria-hidden="true">iii.</span>
+            <h3 class="principle__title">Choices, not pressure</h3>
+            <p>Where there’s more than one sensible option, you’ll hear about each one, including its costs and what it asks of you.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ TREATMENTS ============ -->
+    <section class="section treatments" id="treatments" aria-labelledby="treatments-title">
+      <div class="container">
+        <div class="label-row" data-reveal><span class="tag">Treatments</span><span class="count" aria-hidden="true">(02)</span></div>
+
+        <div class="section-intro" data-reveal>
+          <h2 class="h2" id="treatments-title">Treatments, <em>plainly</em> described.</h2>
+          <p>From a routine check-up to a long-considered change to your smile. Not sure what you need? Book a consultation and we’ll work it out together. <a class="text-link" href="services.html">See all treatments in detail</a>.</p>
+        </div>
+
+        <div class="services" data-services>
+          <ol class="services__list">
+            <li class="svc is-active" data-svc="checkups">
+              <h3 class="svc__head">
+                <button class="svc__trigger" type="button" aria-expanded="true" aria-controls="svc-checkups">
+                  <span class="svc__name">Check-ups &amp; examinations</span><span class="svc__num" aria-hidden="true">01</span>
+                  <span class="svc__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="svc__sub">Examinations · Oral health advice</p>
+              <div class="svc__more" id="svc-checkups">
+                <img class="svc__thumb" src="assets/images/checkups-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="A clinician in olive scrubs examining a reclining patient’s teeth.">
+                <p class="svc__text">A thorough look at your teeth, gums and mouth, <em>with time to ask questions.</em> We’ll tell you what’s healthy, what to keep an eye on and whether anything needs attention.</p>
+                <a class="btn btn--primary" href="contact.html?treatment=Check-up%20or%20examination#request">Request a check-up</a>
+              </div>
+            </li>
+            <li class="svc" data-svc="hygiene">
+              <h3 class="svc__head">
+                <button class="svc__trigger" type="button" aria-expanded="false" aria-controls="svc-hygiene">
+                  <span class="svc__name">Hygiene appointments</span><span class="svc__num" aria-hidden="true">02</span>
+                  <span class="svc__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="svc__sub">Cleaning · Gum health</p>
+              <div class="svc__more" id="svc-hygiene">
+                <img class="svc__thumb" src="assets/images/hygiene-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="A dental mirror held in the foreground with a treatment chair softly blurred behind.">
+                <p class="svc__text">Gentle, careful cleaning to remove build-up and <em>support healthy gums,</em> plus practical advice you can use at home.</p>
+                <a class="btn btn--primary" href="contact.html?treatment=Hygiene%20appointment#request">Request a hygiene visit</a>
+              </div>
+            </li>
+            <li class="svc" data-svc="whitening">
+              <h3 class="svc__head">
+                <button class="svc__trigger" type="button" aria-expanded="false" aria-controls="svc-whitening">
+                  <span class="svc__name">Teeth whitening</span><span class="svc__num" aria-hidden="true">03</span>
+                  <span class="svc__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="svc__sub">Natural-looking brightening</p>
+              <div class="svc__more" id="svc-whitening">
+                <img class="svc__thumb" src="assets/images/whitening-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="A young woman smiling naturally as she looks into a hand mirror.">
+                <p class="svc__text">A <em>natural-looking</em> brightening of your own teeth. We’ll first check whether whitening suits you and explain what result is realistic.</p>
+                <a class="btn btn--primary" href="contact.html?treatment=Teeth%20whitening#request">Ask about whitening</a>
+              </div>
+            </li>
+            <li class="svc" data-svc="aligners">
+              <h3 class="svc__head">
+                <button class="svc__trigger" type="button" aria-expanded="false" aria-controls="svc-aligners">
+                  <span class="svc__name">Clear aligners</span><span class="svc__num" aria-hidden="true">04</span>
+                  <span class="svc__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="svc__sub">Removable, discreet straightening</p>
+              <div class="svc__more" id="svc-aligners">
+                <img class="svc__thumb" src="assets/images/aligners-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="Hands holding a set of clear dental aligners and their storage case.">
+                <p class="svc__text">Discreet, removable aligners that straighten teeth <em>gradually.</em> We’ll assess whether they’re right for you and explain the commitment involved.</p>
+                <a class="btn btn--primary" href="contact.html?treatment=Clear%20aligners#request">Ask about aligners</a>
+              </div>
+            </li>
+            <li class="svc" data-svc="implants">
+              <h3 class="svc__head">
+                <button class="svc__trigger" type="button" aria-expanded="false" aria-controls="svc-implants">
+                  <span class="svc__name">Dental implants</span><span class="svc__num" aria-hidden="true">05</span>
+                  <span class="svc__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="svc__sub">Replacing a missing tooth</p>
+              <div class="svc__more" id="svc-implants">
+                <img class="svc__thumb" src="assets/images/implants-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="A gloved hand holding a model of a dental implant with its crown.">
+                <p class="svc__text">A long-term way to replace a missing tooth. It starts with a detailed consultation, so you’ll understand <em>each stage, the timeline and the costs</em> before deciding.</p>
+                <a class="btn btn--primary" href="contact.html?treatment=Implant%20consultation#request">Book a consultation</a>
+              </div>
+            </li>
+            <li class="svc" data-svc="urgent">
+              <h3 class="svc__head">
+                <button class="svc__trigger" type="button" aria-expanded="false" aria-controls="svc-urgent">
+                  <span class="svc__name">Urgent appointments</span><span class="svc__num" aria-hidden="true">06</span>
+                  <span class="svc__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="svc__sub">Toothache · Chips · Lost fillings</p>
+              <div class="svc__more" id="svc-urgent">
+                <img class="svc__thumb" src="assets/images/urgent-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="A bright, empty treatment room with a dental chair ready for the next patient.">
+                <p class="svc__text">Toothache, a chipped tooth or a lost filling? Get in touch <em>as early in the day as you can</em> and we’ll do our best to see you promptly.</p>
+                <a class="btn btn--primary" href="contact.html?treatment=Urgent%20appointment#request">Request an urgent visit</a>
+              </div>
+            </li>
+          </ol>
+
+          <!-- Desktop only: image + detail panel mirror the active treatment (filled by main.js) -->
+          <div class="services__media" aria-hidden="true">
+            <img class="is-active" data-media="checkups" src="assets/images/checkups-600.webp" srcset="assets/images/checkups-600.webp 600w, assets/images/checkups-1000.webp 1000w" sizes="28vw" width="600" height="750" loading="lazy" decoding="async" alt="">
+            <img data-media="hygiene" src="assets/images/hygiene-600.webp" srcset="assets/images/hygiene-600.webp 600w, assets/images/hygiene-1000.webp 1000w" sizes="28vw" width="600" height="750" loading="lazy" decoding="async" alt="">
+            <img data-media="whitening" src="assets/images/whitening-600.webp" srcset="assets/images/whitening-600.webp 600w, assets/images/whitening-1000.webp 1000w" sizes="28vw" width="600" height="750" loading="lazy" decoding="async" alt="">
+            <img data-media="aligners" src="assets/images/aligners-600.webp" srcset="assets/images/aligners-600.webp 600w, assets/images/aligners-1000.webp 1000w" sizes="28vw" width="600" height="750" loading="lazy" decoding="async" alt="">
+            <img data-media="implants" src="assets/images/implants-600.webp" srcset="assets/images/implants-600.webp 600w, assets/images/implants-1000.webp 1000w" sizes="28vw" width="600" height="750" loading="lazy" decoding="async" alt="">
+            <img data-media="urgent" src="assets/images/urgent-600.webp" srcset="assets/images/urgent-600.webp 600w, assets/images/urgent-1000.webp 1000w" sizes="28vw" width="600" height="750" loading="lazy" decoding="async" alt="">
+          </div>
+          <div class="services__panel" data-services-panel aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ YOUR VISIT ============ -->
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="label-row" data-reveal><span class="tag">Your visit</span><span class="count" aria-hidden="true">(03)</span></div>
+
+        <div class="section-intro" data-reveal>
+          <h2 class="h2" id="visit-title">What a visit <em>feels</em> like.</h2>
+          <p>From the moment you arrive to the moment you leave, you’ll know what’s happening and why.</p>
+        </div>
+
+        <ol class="bento">
+          <li class="bento__tile bento__tile--image bento__tile--tall" data-reveal="image">
+            <img src="assets/images/experience-700.webp" srcset="assets/images/experience-700.webp 700w, assets/images/experience-1200.webp 1200w" sizes="(min-width: 64em) 40vw, 100vw" width="700" height="933" loading="lazy" decoding="async"
+                 alt="A woman reading quietly in a softly lit, minimal waiting area.">
+            <div class="bento__caption">
+              <span class="bento__step">Before</span>
+              <h3 class="bento__title">Tell us what’s on your mind</h3>
+              <p>Let us know what you’d like help with and anything that worries you, so we can plan the right amount of time.</p>
+            </div>
+          </li>
+          <li class="bento__tile bento__tile--mist" data-reveal>
+            <span class="bento__step">Arrival</span>
+            <h3 class="bento__title">A <em>conversation</em> first</h3>
+            <p>We start sitting upright and talking, not reclined in the chair. You’ll know what we plan to do before we do it.</p>
+          </li>
+          <li class="bento__tile bento__tile--image bento__tile--room" data-reveal="image">
+            <img src="assets/images/room-500.webp" srcset="assets/images/room-500.webp 500w, assets/images/room-800.webp 800w" sizes="(min-width: 64em) 24vw, 100vw" width="500" height="500" loading="lazy" decoding="async"
+                 alt="A white treatment chair beside a large window filled with daylight.">
+          </li>
+          <li class="bento__tile bento__tile--line" data-reveal>
+            <span class="bento__step">During</span>
+            <h3 class="bento__title">Your pace, <em>your signal</em></h3>
+            <p>We check in as we go and explain each step. Use your signal to pause at any time.</p>
+          </li>
+          <li class="bento__tile bento__tile--dark" data-reveal>
+            <span class="bento__step">Afterwards</span>
+            <h3 class="bento__title">A clear <em>next step</em></h3>
+            <p>You’ll leave knowing what we found, the options we discussed and what, if anything, happens next.</p>
+            <a class="link-arrow link-arrow--light" href="contact.html#request">Book an appointment</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FAQS ============ -->
+    <section class="section faqs" id="faqs" aria-labelledby="faqs-title">
+      <div class="container">
+        <div class="label-row" data-reveal><span class="tag">Questions</span><span class="count" aria-hidden="true">(04)</span></div>
+
+        <div class="faqs__grid">
+          <div class="faqs__head" data-reveal>
+            <h2 class="h2" id="faqs-title">Good questions, <em>straight</em> answers.</h2>
+            <p>Can’t see your question? <a class="text-link" href="contact.html#request">Send us a message</a> with your appointment request.</p>
+          </div>
+
+          <div class="accordion" data-reveal>
+            <details class="accordion__item">
+              <summary class="accordion__summary">How do I book my first appointment?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <div class="accordion__content">
+                <p>Fill in the appointment request form on our <a class="text-link" href="contact.html#request">contact page</a>. The team will contact you to agree a time that suits you. Your appointment is only confirmed once you’ve heard back from us.</p>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__summary">I’m nervous. Can you help?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <div class="accordion__content">
+                <p>Yes. Mention it when you get in touch and we’ll plan extra time. Your first visit can simply be a conversation, and you can pause at any point with a signal we agree together.</p>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__summary">What happens at a first appointment?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <div class="accordion__content">
+                <p>We’ll ask about your dental and general health and what you’d like help with, then examine your teeth, gums and mouth. Afterwards we explain what we found and talk through any options.</p>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__summary">How much will my treatment cost?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <div class="accordion__content">
+                <p>It depends on what you need, so we can’t give a reliable figure until we’ve seen you. After your examination we’ll explain your options and their costs before any treatment begins.</p>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__summary">I’m in pain. What should I do?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <div class="accordion__content">
+                <p>Contact us as early in the day as you can and we’ll do our best to help. If you have swelling that affects your breathing, swallowing or eye, or bleeding that won’t stop, call 999 or go to A&amp;E. Outside our hours, NHS 111 can advise you.</p>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__summary">Can I change or cancel an appointment?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <div class="accordion__content">
+                <p>Of course. Please let us know as soon as you can, so we can offer the time to someone else and find a new one for you.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="logo logo--light" href="index.html" aria-label="Calder Dental Studio — home">
+          <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="14.75" />
+            <path d="M5 19.5h22" />
+            <path d="M10.5 19.5a5.5 5.5 0 0 1 11 0" />
+          </svg>
+          <span class="logo__word">Calder</span>
+        </a>
+        <a class="site-footer__big" href="contact.html#request">Request an <em>appointment</em><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" /></svg></a>
+      </div>
+
+      <!-- SAMPLE CLINIC DETAILS: fictional address, phone, email and hours for demonstration. Replace with the real details before launch (also in contact.html). -->
+      <div class="site-footer__cols">
+        <div>
+          <h2 class="site-footer__heading">Visit</h2>
+          <address class="site-footer__address">24 Stasikratous Street<br>1065 Nicosia, Cyprus</address>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=24+Stasikratous+Street%2C+1065+Nicosia%2C+Cyprus" rel="noopener">Get directions</a></p>
+        </div>
+        <div>
+          <h2 class="site-footer__heading">Opening hours</h2>
+          <ul class="hours hours--light"><li><span>Monday – Friday</span><span>08:30 – 18:00</span></li><li><span>Saturday</span><span>09:00 – 13:00</span></li><li><span>Sunday</span><span>Closed</span></li></ul>
+        </div>
+        <div>
+          <h2 class="site-footer__heading">Contact</h2>
+          <p><a href="tel:+35722445210">+357 22 445 210</a><br><a href="mailto:hello@calderdental.com.cy">hello@calderdental.com.cy</a></p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="site-footer__heading">Explore</h2>
+          <ul class="site-footer__links">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Our services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> Calder Dental Studio</p>
+        <ul class="site-footer__legal">
+          <li><a href="privacy.html">Privacy notice</a></li>
+          <li><a href="terms.html">Terms of use</a></li>
+        </ul>
+        <p class="site-footer__credit">Photography is illustrative, via <a href="https://unsplash.com" rel="noopener">Unsplash</a>, and does not show our clinic, team or patients.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
